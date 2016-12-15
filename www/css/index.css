@@ -1,0 +1,223 @@
+
+h1, h2, h3, p, tr, th{
+    color: orange;
+}
+
+table object{
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    margin-left: 2px;
+}
+
+td:first-child p {
+    
+    float: right;
+    padding-right: 5px;
+}
+
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5)
+{
+    text-align: center;
+}
+
+
+    background-attachment:fixed;
+}
+
+ul {
+    list-style: none;
+}
+
+html{
+    padding-top: 10px;
+}
+
+h3{
+    text-align: center;
+    margin-right: 40px;
+}
+
+h2{
+    text-align: center;
+}
+
+li.score {
+    border-bottom: 1px solid #777;
+    margin-left: -40px;
+    margin-bottom: 10px;
+}
+
+.results_list div{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;
+    border-right: 1px solid yellow;
+    border-left: 1px solid yellow;
+    background-color:red;
+    );
+    background-attachment:fixed;
+}
+
+.results_list div p{
+    margin-left: 0px;
+}
+
+[data-role="nav"] {
+    position: fixed;
+    z-index: 30;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: orangered;
+}
+
+#nav a{
+    color: black;
+}
+
+.tabs {
+    list-style: none;
+}
+
+.tabs li {
+    float: left;
+    width: 50%;
+}
+
+.tabs a {
+    display: block;
+    line-height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.tabs a:first-child {
+    border-right: 1px solid Black;
+}
+
+/*END NAVIGATION*/
+
+/* Start 2 page display */
+/*pages are not displayed*/
+
+[data-role="page"] {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+    padding-bottom: 5rem;
+    padding-top: 2rem;
+    /* leaving space for the heading */
+}
+
+[data-role="page"].active {
+    display: block;
+    z-index: 20;
+}
+
+/* End 2 page display */
+
+#teamStandings {
+    border-collapse: collapse;
+    border: 1px solid Black;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+#teamStandings th,
+#teamStandings td {
+    border: 1px solid white;
+/*    text-align: center;*/
+    padding: 0.5rem 0.5rem;
+    line-height: 2rem;
+}
+
+body {
+    background-color:black;
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; 
+    position:absolute;             
+    left:50%;
+    top:50%;
+    height:50px;                  
+    width:225px;                  
+    text-align:center;
+    padding:180px 0px 0px 0px;     
+    margin:-115px 0px 0px -112px; 
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  
+        margin:-90px 0px 0px -198px;  
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:white;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:black;
+    display:block;
+}
+
+.event.received {
+    background-color:greenyellow;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
